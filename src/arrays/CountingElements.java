@@ -37,41 +37,31 @@ Constraints:
 package com.rohit.arrays;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map.Entry;
 
 public class CountingElements {
 	 public int countElements(int[] arr) {
-	        
-	        int count =0;
-	        
+		 
+	        int count =0;	        
 	        if(arr.length==1)
 	            return count;
 	        
-	        HashMap<Integer,Integer> mMap = new HashMap<Integer,Integer>();
+	        HashSet<Integer> mSet = new HashSet<Integer>();
 	        
 	        for(int i=0; i<arr.length ; i++) {
-	           
-	            if(!mMap.containsKey(arr[i])) {
-	                mMap.put(arr[i],1);
-	            }
-	            
-	            else {
-	                mMap.put(arr[i],mMap.get(arr[i])+1);
-	            }
-	            
-	            
+	           mSet.add(arr[i]);            
 	        }        
 
 	        
-	        for(Entry<Integer,Integer> entrySet : mMap.entrySet()) {
-	            
-	            int key = entrySet.getKey();           
-	            if(mMap.containsKey(key+1)) {
-	                count=count+entrySet.getValue();
-	            }
+	        for(int i=0 ; i<arr.length ;i++) {
+	           if(mSet.contains(arr[i]+1)) {
+	        	   count++;
+	           }
+	        	
 	        }
 	     
-	        return count;
-	    }
+	        return count;    
+	 }
 
 }
