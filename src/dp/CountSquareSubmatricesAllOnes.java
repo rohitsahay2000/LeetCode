@@ -45,6 +45,10 @@ package com.rohit.dp;
 
 public class CountSquareSubmatricesAllOnes {
 
+	public static void main(String[] args) {
+
+	}
+
 	public int countSquares(int[][] matrix) {
 
 		int arr[][] = new int[matrix.length][matrix[0].length];
