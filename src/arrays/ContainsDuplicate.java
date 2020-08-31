@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class ContainsDuplicate {
 
 	public static void main(String[] args) {
-		int nums[] = {1,1};
+		int nums[] = {1, 1};
 		System.out.println(new ContainsDuplicate().containsDuplicate(nums));
 	}
 
