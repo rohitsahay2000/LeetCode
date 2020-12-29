@@ -27,19 +27,14 @@ public class KthSmallestElementSortedMatrix {
 				}
 
 				else {
-
 					if (matrix[i][j] > pQueue.peek()) {
 						pQueue.poll();
 						pQueue.add(matrix[i][j]);
 
 					}
-
 				}
-
 			}
 		}
-		
-		
 		return pQueue.peek();
 	}
 }
